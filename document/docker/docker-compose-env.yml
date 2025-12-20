@@ -33,9 +33,10 @@ services:
   rabbitmq:
     image: rabbitmq:3.9.11-management
     container_name: rabbitmq
-    volumes:
-      - /mydata/rabbitmq/data:/var/lib/rabbitmq #数据文件挂载
-      - /mydata/rabbitmq/log:/var/log/rabbitmq #日志文件挂载
+#    调试不需要
+#    volumes:
+#      - /mydata/rabbitmq/data:/var/lib/rabbitmq #数据文件挂载
+#      - /mydata/rabbitmq/log:/var/log/rabbitmq #日志文件挂载
     ports:
       - 5672:5672
       - 15672:15672
@@ -94,3 +95,5 @@ services:
       - "MODE=standalone"
     ports:
       - 8848:8848
+      - 9848:9848  # ✅ 新增：客户端 gRPC 通信端口
+      - 9849:9849  # ✅ 新增：服务端 gRPC 通信端口
