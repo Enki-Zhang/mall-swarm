@@ -13,6 +13,7 @@ import com.macro.mall.portal.service.OmsPromotionService;
 import com.macro.mall.portal.service.UmsMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class OmsCartItemServiceImpl implements OmsCartItemService {
     @Autowired
     private UmsMemberService memberService;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public int add(OmsCartItem cartItem) {
         int count;

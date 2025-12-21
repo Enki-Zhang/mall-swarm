@@ -33,6 +33,7 @@ services:
   rabbitmq:
     image: rabbitmq:3.9.11-management
     container_name: rabbitmq
+
 #    调试不需要
 #    volumes:
 #      - /mydata/rabbitmq/data:/var/lib/rabbitmq #数据文件挂载
