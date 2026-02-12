@@ -2,7 +2,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://localhost:8848
+        server-addr: http://localhost:28848
+        username: nacos          # 必须加上
+        password: nacos          # 必须加上
       config:
-        server-addr: http://localhost:8848
+        server-addr: http://localhost:28848
         file-extension: yaml
+        username: nacos          # 必须加上
+        password: nacos          # 必须加上

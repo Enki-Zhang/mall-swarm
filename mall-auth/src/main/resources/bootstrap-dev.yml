@@ -2,10 +2,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://localhost:8848
+        server-addr: localhost:28848
+        username: nacos          # 必须加上
+        password: nacos          # 必须加上
+        # 如果你之前在 Docker 环境变量里改了密码，这里填你改后的
       config:
-        server-addr: http://localhost:8848
+        server-addr: localhost:28848
+        username: nacos
+        password: nacos
         file-extension: yaml
-logging:
-  level:
-    root: debug
