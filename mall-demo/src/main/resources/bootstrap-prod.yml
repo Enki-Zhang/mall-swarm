@@ -2,7 +2,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://nacos-registry:8848
+        server-addr: http://nacos-registry:28848
       config:
-        server-addr: http://nacos-registry:8848
+        server-addr: http://nacos-registry:28848
         file-extension: yaml
